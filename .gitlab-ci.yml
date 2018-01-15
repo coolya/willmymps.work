@@ -1,0 +1,20 @@
+image: registry.logv.ws/rubecula/docker.build/build:latest
+stages:
+  - build
+
+
+build:
+  stage: build
+  variables:
+    DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  script:
+    - ./build.sh
+  cache:
+    paths:
+      - node_modules/
+      - packages/
+    untracked: true
+  artifacts:
+    expire_in: 1 mos
+    paths:
+      - public
