@@ -1,0 +1,22 @@
+source https://nuget.org/api/v2
+
+nuget FSharp.Core
+
+nuget Fable.Core
+nuget Fable.Import.Browser
+
+nuget Giraffe
+
+nuget Microsoft.AspNetCore.Hosting
+nuget Microsoft.AspNetCore.Diagnostics
+nuget Microsoft.AspNetCore.Cors
+nuget Microsoft.AspNetCore.Server.Kestrel
+nuget Microsoft.AspNetCore.Server.IISIntegration
+nuget Microsoft.AspNetCore.StaticFiles
+nuget Microsoft.Extensions.Logging.Console
+nuget Microsoft.Extensions.Logging.Debug
+nuget Microsoft.AspNetCore.Authentication.Cookies
+nuget Microsoft.Extensions.DependencyInjection
+
+clitool dotnet-fable
+clitool Microsoft.DotNet.Watcher.Tools
