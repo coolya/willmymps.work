@@ -1,5 +1,5 @@
 source https://nuget.org/api/v2
-
+cache ./nupkgs versions: current
 nuget FSharp.Core
 
 nuget Fable.Core

@@ -12,7 +12,7 @@ build:
   cache:
     paths:
       - node_modules/
-      - packages/
+      - nupkgs/
     untracked: true
   artifacts:
     expire_in: 1 mos
