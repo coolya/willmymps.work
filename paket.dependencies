@@ -20,3 +20,8 @@ nuget Microsoft.Extensions.DependencyInjection
 
 clitool dotnet-fable
 clitool Microsoft.DotNet.Watcher.Tools
+
+group Build
+    source https://nuget.org/api/v2
+
+    nuget FAKE

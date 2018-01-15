@@ -1,3 +1,4 @@
 dotnet-fable
+Microsoft.DotNet.Watcher.Tools
 Fable.Core
 Fable.Import.Browser

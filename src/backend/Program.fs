@@ -31,7 +31,7 @@ let layout (content: XmlNode list) =
                    attr "type" "text/css"
                    attr "href" "/main.css" ]
         ]
-        body [] content
+        body [] (( script [attr "src" "bundle.js"] [] ):: content)
     ]
 
 let partial () =
@@ -96,7 +96,7 @@ let configureLogging (builder : ILoggingBuilder) =
 [<EntryPoint>]
 let main _ =
     let contentRoot = Directory.GetCurrentDirectory()
-    let webRoot     = Path.Combine(contentRoot, "WebRoot")
+    let webRoot     = Path.Combine(contentRoot, "..", "..", "public")
     WebHostBuilder()
         .UseKestrel()
         .UseContentRoot(contentRoot)
