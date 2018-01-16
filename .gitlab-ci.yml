@@ -14,6 +14,7 @@ build:
       - node_modules/
       - nupkgs/
     #untracked: true
+    policy: push
   artifacts:
     expire_in: 1 mos
     paths:
