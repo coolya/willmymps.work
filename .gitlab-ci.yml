@@ -11,9 +11,9 @@ build:
     - ./build.sh
   cache:
     paths:
-      - node_modules/
-      - nupkgs/
-    untracked: true
+      #- node_modules/
+      #- nupkgs/
+    #untracked: true
   artifacts:
     expire_in: 1 mos
     paths:
