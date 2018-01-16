@@ -27,7 +27,7 @@ run() {
   fi
 }
 
-run $PAKET_EXE restore
+run $PAKET_EXE restore -g build
 
 [ ! -e build.fsx ] && run $PAKET_EXE update
 [ ! -e build.fsx ] && run $FAKE_EXE init.fsx
