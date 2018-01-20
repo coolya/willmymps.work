@@ -1,8 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\paket-files\CompositionalIT\fshelpers\src\FsHelpers\FSharpCore\String.fs">
+      <Paket>True</Paket>
+      <Link>paket-files/String.fs</Link>
+    </Compile>
+    <Compile Include="../shared/Ids.fs">
+      <Link>Ids.fs</Link>
+    </Compile>
+    <Compile Include="../shared/Helper.fs">
+      <Link>Helper.fs</Link>
+    </Compile>
+    <Compile Include="../shared/Data.fs">
+      <Link>Data.fs</Link>
+    </Compile>
     <Compile Include="App.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />

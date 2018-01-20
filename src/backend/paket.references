@@ -12,3 +12,5 @@ Microsoft.Extensions.Logging.Console
 Microsoft.Extensions.Logging.Debug
 Microsoft.AspNetCore.Authentication.Cookies
 Microsoft.Extensions.DependencyInjection
+
+File: String.fs

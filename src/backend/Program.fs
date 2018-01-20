@@ -1,4 +1,4 @@
-module backend.App
+module WillMyMps.Work.Backend.App
 
 open System
 open System.IO
@@ -10,6 +10,8 @@ open Microsoft.Extensions.DependencyInjection
 open Giraffe
 open GiraffeViewEngine
 
+
+
 // ---------------------------------
 // Models
 // ---------------------------------
@@ -19,6 +21,7 @@ type Message =
         Text : string
     }
 
+
 // ---------------------------------
 // Views
 // ---------------------------------
@@ -26,7 +29,7 @@ type Message =
 let layout (content: XmlNode list) =
     html [] [
         head [] [
-            title []  [ encodedText "backend" ]
+            title []  [ encodedText "Will my MPS work?" ]
             link [ attr "rel"  "stylesheet"
                    attr "type" "text/css"
                    attr "href" "/main.css" ]
@@ -35,7 +38,7 @@ let layout (content: XmlNode list) =
     ]
 
 let partial () =
-    h1 [] [ encodedText "backend" ]
+    h1 [] [ encodedText "Will my MPS work?" ]
 
 let indexView (model : Message) =
     [
