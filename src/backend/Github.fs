@@ -11,6 +11,8 @@ open Giraffe.Tasks
 
 open Model
 open WillMyMps.Work.Shared.Data
+open WillMyMps.Work.Shared.Logging
+open WillMyMps.Work.Backend.Logger.Console
 
 let getFilePath repo =
     repo.DependencyManager |> function
@@ -29,15 +31,19 @@ let parseFileContent repo (content: Stream) =
 
     let rec getVersionLine (reader: TextReader) =
         task {
-            let! next = reader.ReadLineAsync()
-            match next |> String.contains strToLookUp with
-            | true -> return next
-            | _ -> return! getVersionLine reader
+            let! current = reader.ReadLineAsync()
+
+            match current |> Option.ofObj |> Option.map (String.contains strToLookUp) with
+            | Some true -> return Some current
+            | Some false -> return! getVersionLine reader
+            | _ ->
+                error "can't find variable" |> logConsole
+                return None
         }
     task {
         use reader = new StreamReader(content)
         let! versionStr =  getVersionLine reader
-        return versionStr |> parseVerionLine repo
+        return versionStr |> Option.bind (parseVerionLine repo)
     }
 
 let getMpsVersion repo branch =

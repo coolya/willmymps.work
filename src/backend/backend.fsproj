@@ -20,12 +20,16 @@
     <Compile Include="../shared/Ids.fs">
       <Link>Ids.fs</Link>
     </Compile>
+    <Compile Include="../shared/Logging.fs">
+      <Link>Logging.fs</Link>
+    </Compile>
     <Compile Include="../shared/Helper.fs">
       <Link>Helper.fs</Link>
     </Compile>
     <Compile Include="../shared/Data.fs">
       <Link>Data.fs</Link>
     </Compile>
+    <Compile Include="Logger.fs"/>
     <Compile Include="Model.fs" />
     <Compile Include="Github.fs" />
     <Compile Include="Repos.fs" />
