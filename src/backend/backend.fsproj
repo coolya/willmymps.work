@@ -9,6 +9,10 @@
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\paket-files\coolya\52588c4605e7f83b8376fdaf3e43ce3f\Fable.Compat.Helper.fs">
+      <Paket>True</Paket>
+      <Link>paket-files/Fable.Compat.Helper.fs</Link>
+    </Compile>
     <Compile Include="..\..\paket-files\CompositionalIT\fshelpers\src\FsHelpers\FSharpCore\String.fs">
       <Paket>True</Paket>
       <Link>paket-files/String.fs</Link>
@@ -25,6 +29,8 @@
     <Compile Include="Model.fs" />
     <Compile Include="Github.fs" />
     <Compile Include="Repos.fs" />
+    <Compile Include="views/Common.fs" />
+    <Compile Include="views/Index.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

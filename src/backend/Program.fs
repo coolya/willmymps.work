@@ -10,58 +10,19 @@ open Microsoft.Extensions.DependencyInjection
 open Giraffe
 open GiraffeViewEngine
 
+open Views.Index
 
-
-// ---------------------------------
-// Models
-// ---------------------------------
-
-type Message =
-    {
-        Text : string
-    }
-
-
-// ---------------------------------
-// Views
-// ---------------------------------
-
-let layout (content: XmlNode list) =
-    html [] [
-        head [] [
-            title []  [ encodedText "Will my MPS work?" ]
-            link [ attr "rel"  "stylesheet"
-                   attr "type" "text/css"
-                   attr "href" "/main.css" ]
-        ]
-        body [] (( script [attr "src" "bundle.js"] [] ):: content)
-    ]
-
-let partial () =
-    h1 [] [ encodedText "Will my MPS work?" ]
-
-let indexView (model : Message) =
-    [
-        partial()
-        p [] [ encodedText model.Text ]
-    ] |> layout
 
 // ---------------------------------
 // Web app
 // ---------------------------------
 
-let indexHandler (name : string) =
-    let greetings = sprintf "Hello %s, from Giraffe!" name
-    let model     = { Text = greetings }
-    let view      = indexView model
-    renderHtml view
 
 let webApp =
     choose [
         GET >=>
             choose [
-                route "/" >=> indexHandler "world"
-                routef "/hello/%s" indexHandler
+                route "/" >=> indexHandler
             ]
         setStatusCode 404 >=> text "Not Found" ]
 

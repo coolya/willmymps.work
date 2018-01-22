@@ -14,3 +14,4 @@ Microsoft.AspNetCore.Authentication.Cookies
 Microsoft.Extensions.DependencyInjection
 
 File: String.fs
+File: Fable.Compat.Helper.fs

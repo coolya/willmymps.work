@@ -23,6 +23,8 @@ github CompositionalIT/fshelpers src/FsHelpers/FSharpCore/String.fs
 clitool dotnet-fable
 clitool Microsoft.DotNet.Watcher.Tools
 
+gist coolya/52588c4605e7f83b8376fdaf3e43ce3f Fable.Compat.Helper.fs
+
 group Build
     source https://nuget.org/api/v2
 

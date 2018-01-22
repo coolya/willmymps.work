@@ -11,5 +11,12 @@ let repos =  [
          Branches = All
          DefaultBranch = "master"
          DependencyManager = gradle "build.gradle" "ext.mpsBuild"
+     };
+    {
+         Name = "iets3.opensource"
+         Url = Uri("https://github.com/IETS3/iets3.opensource")
+         Branches = All
+         DefaultBranch = "master"
+         DependencyManager = gradle "build.gradle" "ext.mpsVersion"
      }
 ]

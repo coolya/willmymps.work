@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "frontend", "src\frontend\frontend.fsproj", "{31C1302E-2412-4A87-B60B-798732D0E1FC}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "backend", "src\backend\backend.fsproj", "{D5DE468B-D1C4-46AE-9C43-638C9CCC0442}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paket", "Paket", "{ECC88616-9E3C-4D48-95CA-C8FA192D52F5}"
+ProjectSection(SolutionItems) = preProject
+	paket.dependencies = paket.dependencies
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31C1302E-2412-4A87-B60B-798732D0E1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C1302E-2412-4A87-B60B-798732D0E1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C1302E-2412-4A87-B60B-798732D0E1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C1302E-2412-4A87-B60B-798732D0E1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5DE468B-D1C4-46AE-9C43-638C9CCC0442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DE468B-D1C4-46AE-9C43-638C9CCC0442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DE468B-D1C4-46AE-9C43-638C9CCC0442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DE468B-D1C4-46AE-9C43-638C9CCC0442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

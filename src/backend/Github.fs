@@ -63,3 +63,5 @@ let getMpsVersion repo branch =
         else
             return Error (sprintf "got error requesting file from github %A" res.StatusCode)
     }
+
+let getMpsVersionDefault repo = getMpsVersion repo repo.DefaultBranch
