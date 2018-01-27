@@ -22,3 +22,8 @@ type Repository =
         DefaultBranch: string
         DependencyManager: DependencyManager
     }
+
+let extractInfo (uri: Uri) =
+    match uri.Segments |> Array.length with
+    | x when x >= 3 -> Some(uri.Segments.[1], uri.Segments.[2])
+    | _ -> None

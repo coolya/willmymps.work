@@ -33,6 +33,7 @@
     <Compile Include="Model.fs" />
     <Compile Include="Github.fs" />
     <Compile Include="Repos.fs" />
+    <Compile Include="api/Branches.fs" />
     <Compile Include="views/Common.fs" />
     <Compile Include="views/Index.fs" />
     <Compile Include="Program.fs" />

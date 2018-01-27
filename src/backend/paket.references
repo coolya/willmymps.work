@@ -13,5 +13,7 @@ Microsoft.Extensions.Logging.Debug
 Microsoft.AspNetCore.Authentication.Cookies
 Microsoft.Extensions.DependencyInjection
 
+Octokit
+
 File: String.fs
 File: Fable.Compat.Helper.fs

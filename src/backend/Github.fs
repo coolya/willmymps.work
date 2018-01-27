@@ -4,6 +4,7 @@ open System
 open System.IO
 open System.Net.Http
 
+open Octokit
 
 open FSharp.Core
 
@@ -71,3 +72,14 @@ let getMpsVersion repo branch =
     }
 
 let getMpsVersionDefault repo = getMpsVersion repo repo.DefaultBranch
+
+let fetchBranches repo =
+    task {
+        match extractInfo repo.Url with
+        | Some(owner, repo) ->
+            let client = GitHubClient(ProductHeaderValue("willmymps.work"))
+            let! branches = client.Repository.Branch.GetAll(owner, repo)
+            return Some (branches |> List.ofSeq)
+        | _ -> return None
+    }
+

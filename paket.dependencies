@@ -18,6 +18,8 @@ nuget Microsoft.Extensions.Logging.Debug
 nuget Microsoft.AspNetCore.Authentication.Cookies
 nuget Microsoft.Extensions.DependencyInjection
 
+nuget Octokit
+
 github CompositionalIT/fshelpers src/FsHelpers/FSharpCore/String.fs
 
 clitool dotnet-fable
