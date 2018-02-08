@@ -72,7 +72,7 @@ let cleanProject path =
 
 
 Target "Clean" (fun _ ->
-    cleanProject "./src/rontend"
+    cleanProject "./src/frontend"
     cleanProject "./src/backend"
 )
 
