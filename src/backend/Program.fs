@@ -11,7 +11,7 @@ open Giraffe
 open GiraffeViewEngine
 
 open Views.Index
-open Api.Branches
+open Api.Main
 
 
 // ---------------------------------
@@ -24,10 +24,7 @@ let webApp =
         GET >=>
             choose [
                 route "/" >=> indexHandler
-                subRoute "/api"
-                    (choose [
-                        routef "/branches/%s" getBranches
-                     ])
+                subRoute "/api" apiRouter
             ]
         setStatusCode 404 >=> text "Not Found" ]
 

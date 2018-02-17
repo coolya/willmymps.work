@@ -8,7 +8,7 @@ open Octokit
 
 open FSharp.Core
 
-open Giraffe.Tasks
+open Giraffe
 
 open Model
 open WillMyMps.Work.Shared.Data
