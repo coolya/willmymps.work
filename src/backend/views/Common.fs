@@ -13,5 +13,8 @@ let layout (content: XmlNode list) =
                    attr "type" "text/css"
                    attr "href" "/main.css" ]
         ]
-        body [] (( script [attr "src" "bundle.js"] [] ):: content)
+        body [] [
+            script [attr "src" "bundle.js"] []
+            div [ _class "wrapper"  ] content
+         ]
     ]
