@@ -58,7 +58,12 @@ let indexView (model : Repository list)  =
 
         let header =
             R.div [ClassName "header"] [
-                R.h1 [][R.str "Will my MPS work?"]
+                R.span[ClassName "mps-logo"][]
+                R.p[ClassName "claim"] [
+                    R.str "Will my "
+                    R.strong[] [R.str "MPS"]
+                    R.str " work?"
+                ]
                 R.p [][
                     R.str "This website shows you open source repositories and which MPS version they are using. Click one of the repositories for more infos e.g. which version is used on other branches."
                 ]
