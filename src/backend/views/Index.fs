@@ -37,7 +37,9 @@ let repoPart repo =
                 R.h2 [] [R.str (sprintf "%s"(v.ToString))]
             ]
     R.div [ ClassName "repo" ] [
-        R.h2 [][R.str repo.Name]
+        R.div[ClassName "reponame"][
+            R.h2 [][R.str repo.Name]
+        ]
         R.div [][
             R.h3 [][ R.str "Branch"]
             R.h3 [] [ R.str repo.DefaultBranch ]
