@@ -11,6 +11,7 @@ open Giraffe
 open GiraffeViewEngine
 
 open Views.Index
+open Views.Repo
 open Api.Main
 
 
@@ -24,6 +25,7 @@ let webApp =
         GET >=>
             choose [
                 route "/" >=> indexHandler
+                routef "/repo/%s" repoHandler
                 subRoute "/api" apiRouter
             ]
         setStatusCode 404 >=> text "Not Found" ]

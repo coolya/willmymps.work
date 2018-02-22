@@ -70,11 +70,20 @@ body {
 }
 
 .repo > .reponame > h2 {
-width: auto;
-margin-left: 10px;
-margin-right: 20px;
-margin-bottom: 10px;
-margin-top: auto;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.repos a {
+    text-decoration: unset;
+    color: inherit;
+}
+
+.repo > div {
+    text-align: left;
 }
 
 .header {
@@ -109,18 +118,27 @@ margin-top: auto;
     min-width:200px;
 }
 
-.repo > div > h3 {
-    width: 50%;
+.repo > div:not(.reponame) {
+    margin-left: 10px;
 }
 
-.repo > div > h3:not(:first-child) {
+.repo > .reponame + div {
+    margin-top: 10px;
+}
+
+.repo > div > h4 {
     font-family: 'Inconsolata', Georgia, 'Times New Roman', Times, serif;
-    /*font-size: 1em;*/
+    font-size: 1em;
     font-weight: normal;
+    width: 100%;
+    margin: unset;
 }
 
 .repo > div > h3 {
     display: inline-block;
+    width: 100%;
+    margin: unset;
+    font-size:1.5em;
 }
 
 .repo > div > h2 {
@@ -134,11 +152,11 @@ margin-top: auto;
 }
 
 @media all and (min-width: 800px) {
-    .main    { flex: 3 0px; }
+    .repos   { flex: 3 0px; }
     .aside-1 { order: 1; }
-    .main    { order: 2; }
+    .repos   { order: 2; }
     .aside-2 { order: 3; }
-    .footer  { order: 4; }
+    .about  { order: 4; }
 }
 
 body {

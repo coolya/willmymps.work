@@ -29,22 +29,24 @@ let repoPart repo =
         match x with
         | Error s ->
             R.div[] [
-                R.h2 [] [R.str (sprintf "Failed to fetch MPS version: %s" s)]
+                R.h2 [] [
+                    R.str (sprintf "Failed to fetch MPS version: %s" s)]
             ]
         | Ok (v: MpsVersion) ->
             R.div[] [
-                R.h2 [] [R.str "MPS Version"]
-                R.h2 [] [R.str (sprintf "%s"(v.ToString))]
+                R.h3 [] [R.str (sprintf "MPS %s"(v.ToString))]
             ]
     R.div [ ClassName "repo" ] [
         R.div[ClassName "reponame"][
-            R.h2 [][R.str repo.Name]
-        ]
-        R.div [][
-            R.h3 [][ R.str "Branch"]
-            R.h3 [] [ R.str repo.DefaultBranch ]
+            R.h2 [][
+                R.a[Href (sprintf "/repo/%s" repo.Name)][R.str repo.Name]
+            ]
         ]
         content
+        R.div [][
+            R.h4 [][ R.str (sprintf "on branch %s" repo.DefaultBranch)]
+        ]
+
 
     ]
 
@@ -80,8 +82,11 @@ let indexView (model : Repository list)  =
                     R.str " and sent a pull requst with your repository information."
                 ]
             ]
-        return header :: repoPart @ [about]
 
+        let repos =
+            R.div[ClassName "repos wrapper"] repoPart
+
+        return [header; repos; about]
     }
 
 

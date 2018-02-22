@@ -37,6 +37,7 @@
     <Compile Include="api/Api.fs" />
     <Compile Include="views/Common.fs" />
     <Compile Include="views/Index.fs" />
+    <Compile Include="views/Repo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
